@@ -43,11 +43,12 @@
                                 <span class="index" th:text="${itemStat.index+1}"></span>
                                 <span class="item-id" th:text="'id: '+${item.product.productId}"></span>
                                 <span class="item-name" th:text="${item.product.name}"></span>
-                                <span class="item-unit-price" th:text="'unit: '+${item.product.price}"></span>
-                                <span class="price-unit">₺</span>
+
+                                <span class="item-unit-price" th:text="'unit: Rs.'+${item.product.price}"></span>
+
                                 <span class="item-quantity" th:text="'x'+${item.quantity}"></span>
-                                <span class="item-price" th:text="'total: '+${item.product.price * item.quantity}"></span>
-                                <span class="price-unit">₺</span>
+                                <span class="item-price" th:text="'total: Rs.' +${item.product.price * item.quantity}"></span>
+
                             </div>
                             <div class="item" th:each="item : ${orderDetails.items}" th:if="${item.product == null}">
                                 <span class="index" th:text="${itemStat.index+1}"></span>

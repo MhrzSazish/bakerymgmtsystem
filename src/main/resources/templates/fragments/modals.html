@@ -60,7 +60,7 @@
                             <label th:for="newStatusField">New Status:</label>
                         </td>
                         <td>
-                            <div th:id="'newStatusField'" th:replace="fragments/elements :: dropdown(id='newStatusField', items=${T(com.tahadonuk.restaurantmanagementsystem.data.TableStatus).values()})"/>
+                            <div th:id="'newStatusField'" th:replace="fragments/elements :: dropdown(id='newStatusField', items=${T(com.project.bakerymanagementsystem.data.TableStatus).values()})"/>
                         </td>
                     </tr>
                 </table>

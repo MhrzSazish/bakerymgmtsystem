@@ -26,27 +26,23 @@
                             <td>
                                 <input type="text" minlength="1" name="name" placeholder="Name">
                             </td>
-                            
-                            <th>
-                                <label>Description</label>
-                            </th>
-                            <td>
-                                <input type="text" name="description" placeholder="Description">
-                            </td>
+
                         </tr>
                         <tr>
                             <th>
                                 <label>Type</label>
                             </th>
                             <td>
-                                <input type="text" minlength="3" name="type" placeholder="dessert/beverage/meal">
+                                <input type="text" minlength="3" name="type" placeholder="food/beverage">
                             </td>
                             
                             <th>
-                                <label>Price (₺)</label>
+                                <label>Price</label>
                             </th>
                             <td>
-                                <input type="number" min="0" step="0.01" name="price" placeholder="0.0₺">
+                                <label>
+                                    <input type="number" min="0" step="0.01" name="price" placeholder="0.0">
+                                </label>
                             </td>
                         </tr>
                         
@@ -68,9 +64,11 @@
                     </table>
                 </div>
                 <div class="form-footer">
-                    <a onclick="saveItemFromFormData();" id="saveButton" class="linkButton">Save</a>
-                    <input type="reset" id="resetButton" value="Reset">
+                    <a onclick="saveItemFromFormData();" id="saveButton" class="linkButton" style="background-color: green; color: white; ">Save</a>
+                    <input id="submitButton" type="submit" value="Reset" style="background-color: red; color: white;">
+
                 </div>
+
             </form>
         </div>
         <script src="/js/itemUtils.js"></script>

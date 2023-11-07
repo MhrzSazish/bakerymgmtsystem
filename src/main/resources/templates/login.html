@@ -13,7 +13,6 @@
             <div class="form-container">
                 <div class="form-header">
                     <h2 class="big-title">Login</h2>
-                    <h3 class="small-title">To Admin Panel</h3>
                 </div>
 
                 <h3 class="alert alert-error" th:if="${param.error}">Invalid email or password</h3>
@@ -26,7 +25,8 @@
                     <label for="passwordField">Password</label>
                     <input id="passwordField" type="password" name="password" placeholder="Password"/>
 
-                    <input id="submitButton" type="submit" value="Login">
+                    <input id="submitButton" type="submit" value="Login" style="background-color: blue; color: white;">
+
                 </div>
 
                 <div class="form-footer">

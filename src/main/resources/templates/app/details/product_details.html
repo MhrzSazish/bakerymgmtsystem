@@ -28,8 +28,6 @@
                         <tr>
                             <th>Name:</th>
                             <td th:text="${productDetails.name}"></td>
-                            <th>Description:</th>
-                            <td th:text="${productDetails.description}"></td>
                         </tr>
                         <tr>
                             <th>Stock:</th>
@@ -47,7 +45,6 @@
                     <div class="controls" id="itemControls">
                         <button id="addStockButton" sec:authorize="hasAnyAuthority('ADMIN', 'MANAGER')" th:onclick="'javascript:createStockUpdatePopup('+${productDetails.productId}+')'">Add Stock</button>
                         <button id="updatePriceButton" th:onclick="'javascript:updatePrice('+${productDetails.productId}+')'">Update Price</button>
-                        <button id="updateDescriptionButton" th:onclick="'javascript:updateDescription('+${productDetails.productId}+')'">Update Description</button>
                         <button id="deleteItemButton" th:onclick="'javascript:deleteItem('+${productDetails.productId}+')'">Delete</button>
                     </div>
                 </div>

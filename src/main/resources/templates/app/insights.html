@@ -2,7 +2,7 @@
 <html lang="en" xmlsn="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Restaurant</title>
+    <title>Insights</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/main_page.css">
 </head>
@@ -77,79 +77,6 @@
                             </table>
                         </div>
                     </div>
-                    <div class="sub-section box" id="userStats">
-                        <div class="box-header">
-                            <h2 class="box-title">Users</h2>
-                        </div>
-                        <div class="box-content">
-                            <table>
-                                <tr>
-                                    <th> </th>
-                                    <th>
-                                        <label class="stat-title">Count</label>
-                                    </th>
-                                    <th>
-                                        <label class="stat-title">Percent</label>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label class="stat-label">Admin: </label>
-                                    </th>
-                                    <td>
-                                        <span class="stat-content" th:text="${userStats.adminCount}"></span>
-                                    </td>
-                                    <td>
-                                        <span class="stat-content" th:text="${#numbers.formatDecimal(userStats.getAdminPercent(), 1, 2)}+'%'"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label class="stat-label">Manager: </label>
-                                    </th>
-                                    <td>
-                                        <span class="stat-content" th:text="${userStats.managerCount}"></span>
-                                    </td>
-                                    <td>
-                                        <span class="stat-content" th:text="${#numbers.formatDecimal(userStats.getManagerPercent(), 1, 2)}+'%'"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label class="stat-label">Employee: </label>
-                                    </th>
-                                    <td>
-                                        <span class="stat-content" th:text="${userStats.employeeCount}"></span>
-                                    </td>
-                                    <td>
-                                        <span class="stat-content" th:text="${#numbers.formatDecimal(userStats.getEmployeePercent(), 1, 2)}+'%'"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label class="stat-label">User: </label>
-                                    </th>
-                                    <td>
-                                        <span class="stat-content" th:text="${userStats.userCount}"></span>
-                                    </td>
-                                    <td>
-                                        <span class="stat-content" th:text="${#numbers.formatDecimal(userStats.getUserPercent(), 1, 2)}+'%'"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label class="stat-label">Total: </label>
-                                    </th>
-                                    <td>
-                                        <span class="stat-content" th:text="${userStats.totalCount}"></span>
-                                    </td>
-                                    <td>
-                                        <span class="stat-content" th:text="''"></span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
                     <div class="sub-section box" id="itemStats">
                         <div class="box-header">
                             <h2 class="box-title">Products</h2>
@@ -172,7 +99,7 @@
                                 </tr>
                                 <tr>
                                     <th>
-                                        <label class="stat-label">Meal: </label>
+                                        <label class="stat-label">Food: </label>
                                     </th>
                                     <td>
                                         <span class="stat-content" th:text="${itemStats.mealCount}"></span>
@@ -196,20 +123,6 @@
                                     </td>
                                     <td>
                                         <span class="stat-content" th:text="${#numbers.formatDecimal(itemStats.getBeveragePercent(), 1, 2)}+'%'"></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>
-                                        <label class="stat-label">Dessert: </label>
-                                    </th>
-                                    <td>
-                                        <span class="stat-content" th:text="${itemStats.dessertCount}"></span>
-                                    </td>
-                                    <td>
-                                        <span class="stat-content" th:text="${itemStats.totalDessertStocks}"></span>
-                                    </td>
-                                    <td>
-                                        <span class="stat-content" th:text="${#numbers.formatDecimal(itemStats.getDessertPercent(), 1, 2)}+'%'"></span>
                                     </td>
                                 </tr>
                                 <tr>

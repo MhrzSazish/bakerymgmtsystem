@@ -33,7 +33,7 @@
         </div>
     </div>
     
-    <div class="modal-bg" th:fragment="orderItems(meals, beverages, desserts)">
+    <div class="modal-bg" th:fragment="orderItems(food, beverages)">
         <div id="cart" th:fragment="cart">
             <div class="cart-header">
                 <h2>Order</h2>
@@ -41,7 +41,7 @@
             <div id="itemList">
             </div>
             <div id="cartInfo">
-                <label>Total: <span id="cartPrice">0</span><span id="priceUnit"> ₺</span></label>
+                <label>Total: <span id="cartPrice">0</span><span id="priceUnit"> </span></label>
                 <span>
                 <a onclick="clearCart();" class="linkButton">clear</a>
             </span>
@@ -59,9 +59,8 @@
             <div class="tableWrapper">
                 <table>
                     <tr>
-                        <th>Meal</th>
+                        <th>Food</th>
                         <th>Beverage</th>
-                        <th>Dessert</th>
                     </tr>
                     <tr>
                         <td>
@@ -73,13 +72,13 @@
                                     <th>Stock</th>
                                     <th></th>
                                 </tr>
-                                <tr th:each="meal : ${meals}">
-                                    <td th:text="${meal.productId}"></td>
-                                    <td th:text="${meal.name}"></td>
-                                    <td th:text="${meal.price}"></td>
-                                    <td th:text="${meal.stock}"></td>
+                                <tr th:each="food : ${foods}">
+                                    <td th:text="${food.productId}"></td>
+                                    <td th:text="${food.name}"></td>
+                                    <td th:text="${food.price}"></td>
+                                    <td th:text="${food.stock}"></td>
                                     <td>
-                                        <a class="linkButton" th:onclick="'javascript:addItemToCart('+${meal.productId}+')'">Add</a>
+                                        <a class="linkButton" th:onclick="'javascript:addItemToCart('+${food.productId}+')'">Add</a>
                                     </td>
                                 </tr>
                             </table>
@@ -106,22 +105,22 @@
                         </td>
                         <td>
                             <table>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th>Stock</th>
-                                    <th></th>
-                                </tr>
-                                <tr th:each="dessert : ${desserts}">
-                                    <td th:text="${dessert.productId}"></td>
-                                    <td th:text="${dessert.name}"></td>
-                                    <td th:text="${dessert.price}"></td>
-                                    <td th:text="${dessert.stock}"></td>
-                                    <td>
-                                        <a class="linkButton" th:onclick="'javascript:addItemToCart('+${dessert.productId}+')'">Add</a>
-                                    </td>
-                                </tr>
+<!--                                <tr>-->
+<!--                                    <th>ID</th>-->
+<!--                                    <th>Name</th>-->
+<!--                                    <th>Price</th>-->
+<!--                                    <th>Stock</th>-->
+<!--                                    <th></th>-->
+<!--                                </tr>-->
+<!--                                <tr th:each="dessert : ${desserts}">-->
+<!--                                    <td th:text="${dessert.productId}"></td>-->
+<!--                                    <td th:text="${dessert.name}"></td>-->
+<!--                                    <td th:text="${dessert.price}"></td>-->
+<!--                                    <td th:text="${dessert.stock}"></td>-->
+<!--                                    <td>-->
+<!--                                        <a class="linkButton" th:onclick="'javascript:addItemToCart('+${dessert.productId}+')'">Add</a>-->
+<!--                                    </td>-->
+<!--                                </tr>-->
                             </table>
                         </td>
                     </tr>
