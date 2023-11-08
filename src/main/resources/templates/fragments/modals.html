@@ -11,8 +11,8 @@
         </div>
 
         <div class="modal-footer" th:fragment="modalFooter">
-            <button class="modal-button" th:id="'okButton'">Accept</button>
-            <button class="modal-button" th:id="'cancelButton'" onclick="document.body.querySelector('.modal-bg').remove()">Cancel</button>
+            <button class="modal-button" th:id="'okButton'" style="background-color: green; color: white;">Accept</button>
+            <button class="modal-button" th:id="'cancelButton'" onclick="document.body.querySelector('.modal-bg').remove()" style="background-color: red; color: white;">Cancel</button>
         </div>
 
         <div class="modal-container" id="addTableModal" th:fragment="modal_addTable">
@@ -73,9 +73,9 @@
             <div class="modal-header" th:replace="fragments/modals :: modalHeader('Remove Table')"/>
             <div class="modal-body">
                 <label>Table to delete:
-                    <div th:id="'tableIdField'" th:replace="fragments/elements :: dropdown(id='tableIdField', items=${#numbers.sequence(tableList[0].tableId, #lists.size(tableList)})"/>
+                    <div th:id="'tableIdField'" th:replace="fragments/elements :: dropdown(id='tableIdField', items=${#numbers.sequence(tableList[0].tableId, #lists.size(tableList))})"/>
                 </label>
-                <p>Info: Records for this table will not deleted even after the table is deleted.</p>
+                <p>Info: Records for this table will not delete even after the table is deleted.</p>
             </div>
             <div class="modal-footer" th:replace="fragments/modals :: modalFooter"/>
         </div>

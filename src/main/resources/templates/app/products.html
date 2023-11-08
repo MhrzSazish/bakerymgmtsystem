@@ -55,15 +55,15 @@
                                 <span th:text="${product.price}" class="product-price"></span>
                             </td>
                             <td>
-                                <a class="linkButton" th:href="'api/product/'+${product.productId}+'/details'">Details</a>
+                                <a class="linkButton" th:href="'api/product/'+${product.productId}+'/details'" style="background-color: blue; color: white;">Details</a>
                             </td>
                             <td>
-                                <a class="linkButton" th:onclick="'javascript:createStockUpdatePopup('+${product.productId}+')'">Add Stock</a>
+                                <a class="linkButton" th:onclick="'javascript:createStockUpdatePopup('+${product.productId}+')'" style="background-color: green; color: white;">Add Stock</a>
                             </td>
                         </tr>
                     </table>
                     <div id="itemControls">
-                        <a id="createItemButton" class="linkButton" href="/api/product/create">Create New</a>
+                        <a id="createItemButton" class="linkButton" href="/api/product/create" style="background-color: green; color: white;">Create New</a>
                     </div>
                 </div>
             </div>
