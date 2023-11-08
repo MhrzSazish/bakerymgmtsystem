@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/css/cart.css">
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper" style="background-color: cornsilk;">
             <div class="page-header" th:replace="fragments/general :: pageHeader(title=' / Orders', userData=${user})"/>
             <div class="nav side-nav" th:replace="fragments/general :: sideNav"/>
             <div class="main">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div id="filterControls">
-                    <div class="filterBox">
+                    <div class="filterBox"style="background-color: white;">
                         <h2>Filter by Date interval</h2>
                         <label class="filter-title">From</label>
                         <input id="startDate" type="date">
@@ -72,7 +72,7 @@
                         <button id="filterByIntervalButton" onclick="filterByDateInterval()"style="background-color: blue; color: white;">Filter</button>
                     </div>
                     
-                    <div class="filterBox">
+                    <div class="filterBox"style="background-color: white;">
                         <h2>Filter by Item containing</h2>
                         <table>
                             <tr>

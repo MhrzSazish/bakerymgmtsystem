@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/main_page.css">
 </head>
-    <body>
-        <div class="wrapper">
+    <body style="background-color: cornsilk;">
+        <div class="wrapper"style="background-color: cornsilk;">
             <div th:replace="fragments/general :: pageHeader(title='', userData=${user})"/>
             <div class="nav side-nav" th:replace="fragments/general :: sideNav"/>
             <div class="main">
                 <h1 class="big-title">Insights Overview</h1>
                 <div class="section" id="stats">
-                    <div class="sub-section box" id="tableStats">
+                    <div class="sub-section box" id="tableStats"style="background-color: white;">
                         <div class="box-header">
                             <h2 class="box-title">Tables</h2>
                         </div>
@@ -77,7 +77,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="sub-section box" id="itemStats">
+                    <div class="sub-section box" id="itemStats" style="background-color: white;">
                         <div class="box-header">
                             <h2 class="box-title">Products</h2>
                         </div>
@@ -142,7 +142,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="sub-section box" id="orderStats">
+                    <div class="sub-section box" id="orderStats" style="background-color: white;">
                         <div class="box-header">
                             <h2 class="box-title">Orders</h2>
                         </div>
